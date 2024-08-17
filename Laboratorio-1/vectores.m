@@ -1,4 +1,4 @@
-%% Limpiar la terminal
+    %% Limpiar la terminal
 % Se limpia el Workspace
 clear 
 
@@ -71,7 +71,16 @@ A = [1 2; 3 4]
 B = [1 2 3; 4 5 6]
 
 % Todas las operaciones basicas que vimos para vectores se pueden hacer
-% para matrices, y la sisntexis usada es la misma en ambos casos
+% para matrices, y la sisntexis usada es la misma en ambos casos.
+
+% Operaciones extras que tienen las matrices
+C = [5 6; 7 8];
+
+% Multiplicacion de matrices usual
+multi = A * C
+
+% Potenciacion usual de matrices
+poten = A ^ 3 % = A * A * A
 
 %% Generacion de matrices
 clear
@@ -103,11 +112,14 @@ determinante = det(A)
 % Calculo de la matriz inversa
 inversa = inv(A)
 
+% Calculo de valores propios
+val_prop = eig(A)
 
+% Determinal la diagonal de una matriz
+diagonal = diag(A)
 
-
-
-
+% Se puede usar esta misma funcion para generar un matriz con diagonal un vector
+matriz_diag = diag(diagonal)
 
 
 
