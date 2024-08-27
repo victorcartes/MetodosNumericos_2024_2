@@ -1,0 +1,51 @@
+clear
+clc 
+
+%% 
+clear
+clc 
+
+a = 1;
+b = 5;
+c = 1;
+
+x1 = (-b + sqrt( b^2 - 4 * a * c) )/ 2 * a;
+x2 = (-b - sqrt( b^2 - 4 * a * c) )/ 2 * a;
+disp('El valor de una raiz de la ec. cuadratica es:')
+disp(x1)
+fprintf('La segunda solucion de la ec. cuadratica es %f \n', x2)
+
+a = 1;
+b = 1;
+c = 0;
+
+x1 = (-b + sqrt( b^2 - 4 * a * c) )/ 2 * a;
+x2 = (-b - sqrt( b^2 - 4 * a * c) )/ 2 * a;
+disp('El valor de una raiz de la ec. cuadratica es:')
+disp(x1)
+fprintf('La segunda solucion de la ec. cuadratica es %f \n', x2)
+
+
+% function output = nombrefuncion(input)
+% intrucciones del codigo
+% end
+
+function [x1, x2] = raices_cuadratica(a, b, c)
+    x1 = (-b + sqrt( b^2 - 4 * a * c) )/ 2 * a;
+    x2 = (-b - sqrt( b^2 - 4 * a * c) )/ 2 * a;
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
