@@ -40,6 +40,28 @@ r = newton(f3, df3, 0.7, 1e-12, 10000);
 disp("El valor aproximado de la raiz es: ")
 disp(r)
 
+%% c)
+
+clear
+clc
+
+f1 = inline('[ x(1).^2 + x(1).*x(2) + x(2).^2 - 1 ; x(2) - x(1).^2 ]');
+
+% testeando nos damos cuenta que (1,1) es una aproximacion inicial buena
+x0 = [1; 1];
+
+% Calculamos el Jacobiano de f1
+Jf1 = inline('[ 2*x(1) + x(2), x(1) + 2*x(2) ; -2*x(1), 1]');
+
+% Resolvemos el sistema de ecuaciones no lineales
+r = newton_sistemas(f1, Jf1, x0, 1e-12, 1000);
+
+format long
+disp("El valor aproximado de la raiz es: ")
+disp(r)
+
+
+
 
 
 
